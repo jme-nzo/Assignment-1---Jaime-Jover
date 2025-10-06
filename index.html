@@ -4,6 +4,8 @@
 </head>
 <body>
   <h1>Real-time PSI Data from data.gov.sg</h1>
+  <p id="dataTimestamp">Loading data timestamp...</p>
+  <p id="updatedTime">Loading update time...</p>
   <table id="psiTable">
     <thead>
       <tr>
@@ -26,6 +28,10 @@
 
         const readings = data.items[0].readings;
         const tbody = document.querySelector("#psiTable tbody");
+        const timestamp = data.items[0].timestamp;
+        const updateTime = data.items[0].update_timestamp;
+        const updatedTime = document.getElementById("updatedTime");
+        const dataTimestamp = document.getElementById("dataTimestamp");
 
         for (const [key, value] of Object.entries(readings)) {
           const row = document.createElement("tr");
