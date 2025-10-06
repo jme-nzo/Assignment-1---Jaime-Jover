@@ -3,32 +3,7 @@
   <meta charset="UTF-8">
   <title>Singapore PSI Data (Live)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #fafafa;
-    }
-    h1 {
-      color: #333;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
-    #updatedTime, #dataTimestamp {
-      margin-top: 8px;
-      font-size: 0.95em;
-      color: #666;
-    }
+    
   </style>
 </head>
 <body>
@@ -65,10 +40,8 @@
       const updatedTime = document.getElementById("updatedTime");
       const dataTimestamp = document.getElementById("dataTimestamp");
 
-      // Clear existing table rows
       tbody.innerHTML = "";
 
-      // Add new rows for each reading
       for (const [key, value] of Object.entries(readings)) {
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -83,13 +56,11 @@
         tbody.appendChild(row);
       }
 
-      // Format both timestamps into readable SG time
       const dataTime = new Date(timestamp).toLocaleString("en-SG", { timeZone: "Asia/Singapore" });
       const updateDisplayTime = new Date(updateTime).toLocaleString("en-SG", { timeZone: "Asia/Singapore" });
 
-      // Update display (FIXED LINES)
-      dataTimestamp.textContent = `📅 Data recorded at: ${dataTime}`;
-      updatedTime.textContent = `🔄 Data last updated at: ${updateDisplayTime}`;
+      dataTimestamp.textContent = ` Data recorded at: ${dataTime}`;
+      updatedTime.textContent = ` Data last updated at: ${updateDisplayTime}`;
 
     } catch (error) {
       console.error("Error fetching PSI data:", error);
@@ -97,10 +68,8 @@
     }
   }
 
-  // Initial load
   loadPSIData();
 
-  // 🔁 Auto-refresh every 5 minutes
   setInterval(loadPSIData, 5 * 60 * 1000);
 </script>
 </body>
