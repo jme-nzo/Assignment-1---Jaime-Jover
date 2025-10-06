@@ -1,18 +1,17 @@
 body {
       font-family: Roboto;
-      margin: 50px;
+      margin: 30px;
     }
     table {
       border-collapse: collapse;
       width: 100%;
-      margin-top: 35px;
+      margin-top: 20px;
     }
     th, td {
-      border: 2px solid #ccc;
-      border-color: blue;
-      padding: 8px;
+      border: 1px solid #ccc;
+      padding: 16px;
       text-align: center;
     }
     th {
-      background-color: #f4f4f4;
+      background-color: #ff4848;
     }
