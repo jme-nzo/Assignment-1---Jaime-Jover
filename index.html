@@ -8,6 +8,7 @@
 		<body>
 			<div>
 				<h1> Singapore PSI Table</h1>
+				<h4 id="timestring"></h4>
 
 				<script> fetch('https://api-open.data.gov.sg/v2/real-time/api/psi', {
   headers: {
@@ -15,7 +16,7 @@
   }
 })				</script>
 				
-				<table border="1">
+				<table border="1" id="PSItable">
  				 <tr>
 					 <th></th>
    					 <th>West</th>
