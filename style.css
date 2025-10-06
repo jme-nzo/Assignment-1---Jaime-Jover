@@ -4,6 +4,7 @@ body {
       background-color: #fafafa;
     }
     h1 {
+      text-align: center;
       color: #333;
     }
     table {
@@ -20,6 +21,7 @@ body {
       background-color: #f4f4f4;
     }
     #updatedTime, #dataTimestamp {
+      text-align: center;
       margin-top: 8px;
       font-size: 0.95em;
       color: #666;
