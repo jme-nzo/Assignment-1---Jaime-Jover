@@ -1,7 +1,18 @@
-table, th. td {
-
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 8px;
-  
-}
+body {
+      font-family: Roboto;
+      margin: 50px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 35px;
+    }
+    th, td {
+      border: 2px solid #ccc;
+      border-color: blue;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
